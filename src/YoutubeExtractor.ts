@@ -45,7 +45,7 @@ export default class YoutubeExtractor extends Extractor<YoutubeExtractorOptions>
       isLive: item.isLive,
       fromPlaylist: true,
       playlist: playlist.url,
-      position: item.index + 1
+      position: item.index
     }, item.id));
   }
 
