@@ -1,11 +1,24 @@
-import { Extractor, ExtractorOptions, Media } from 'musicca';
+import { Extractor, ExtractorOptions, Media, Nullable } from 'musicca';
 import ytdl, { downloadOptions, getInfoOptions } from 'ytdl-core';
-import ytsr from 'ytsr';
+import ytsr, {
+  Options as YtsrOptions,
+  Result as YtsrResult,
+  ContinueResult as YtsrContinueResult,
+  Continuation as YtsrContinuation
+} from 'ytsr';
 import ytpl, { Options as YtplOptions } from 'ytpl';
 
 export interface YoutubeExtractorOptions extends ExtractorOptions, downloadOptions {}
 
-export default class YoutubeExtractor extends Extractor<YoutubeExtractorOptions> {
+export interface ExtendedYtsrContinueResult extends YtsrContinueResult {
+  next(): Promise<Nullable<ExtendedYtsrContinueResult>>;
+}
+
+export interface ExtendedYtsrResult extends YtsrResult {
+  next(): Promise<Nullable<ExtendedYtsrContinueResult>>;
+}
+
+export class YoutubeExtractor extends Extractor<YoutubeExtractorOptions> {
   constructor(options?: YoutubeExtractorOptions) {
     super('youtube-extractor', options, 'yt-ext');
   }
@@ -53,7 +66,22 @@ export default class YoutubeExtractor extends Extractor<YoutubeExtractorOptions>
     return ytdl(url, this.options);
   }
 
-  search(input: string) {
-    return ytsr(input);
+  static async search(input: string, options?: YtsrOptions): Promise<ExtendedYtsrResult> {
+    const result = await ytsr(input, options).then((res) => YoutubeExtractor.appendNext<ExtendedYtsrResult>(res, res.continuation));
+
+    return result;
+  }
+
+  static async appendNext<T extends ExtendedYtsrResult | ExtendedYtsrContinueResult>(result: YtsrResult | YtsrContinueResult, continuation: Nullable<YtsrContinuation>): Promise<T> {
+    // eslint-disable-next-line no-param-reassign
+    (result as T).next = async () => {
+      if (!continuation) return null;
+
+      const nextResult = await ytsr.continueReq(continuation);
+
+      return YoutubeExtractor.appendNext(nextResult, nextResult.continuation);
+    };
+
+    return result as T;
   }
 }

@@ -1,8 +1,8 @@
-import Musicca, { Media } from 'musicca';
+import Musicca, { Media, PluginType } from 'musicca';
 import { MemoryQueue } from '@musicca/structs';
 import { Readable } from 'stream';
-import { PluginType } from 'musicca/dist/constants';
-import YoutubeExtractor from '../src/YoutubeExtractor';
+import { Video } from 'ytsr';
+import { YoutubeExtractor } from '../src';
 
 const isCI = Boolean(process.env.CI) || process.env.CI === 'true' || false;
 const VIDEO_ID = 'dQw4w9WgXcQ';
@@ -107,4 +107,14 @@ describe('extracting playlist', () => {
       tStream.destroy();
     })
   );
+});
+
+describe('search', () => {
+  test('should find videos', () => YoutubeExtractor.search('Never Gonna Give You Up', { limit: 5 }).then((res) => {
+    const media = res.items[0] as Video;
+
+    expect(media.type).toBe('video');
+    expect(media.id).toBe(VIDEO_ID);
+    expect(media.url).toBe(`https://www.youtube.com/watch?v=${VIDEO_ID}`);
+  }));
 });
