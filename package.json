@@ -1,11 +1,11 @@
 {
-  "name": "musicca",
+  "name": "@musicca/extractors",
   "version": "1.0.0",
-  "description": "A modular, extensible and flexible music stream manager",
+  "description": "A collection of extractors for Musicca",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "jest tests && npm run build:test && npm run docs:test",
+    "test": "jest tests",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint:report": "eslint --output-file eslint_report.json --format json .",
@@ -13,18 +13,22 @@
     "build": "npx rimraf dist && tsc -p ./tsconfig.json && tscpaths -p ./tsconfig.json -s ./src -o ./dist",
     "build:test": "tsc -p ./tsconfig.json --noEmit",
     "docs": "typedoc && node generateDocs.js",
-    "docs:test": "typedoc && node generateDocs.js --dry-run"
+    "docs:test": "typedoc && node generateDocs.js --dry-run",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/musiccajs/musicca.git"
+    "url": "git+https://github.com/musiccajs/extractors.git"
   },
+  "keywords": [
+    "musicca"
+  ],
   "author": "Edqe_",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/musiccajs/musicca/issues"
+    "url": "https://github.com/musiccajs/extractors/issues"
   },
-  "homepage": "https://github.com/musiccajs/musicca#readme",
+  "homepage": "https://github.com/musiccajs/extractors#readme",
   "files": [
     "dist",
     "LICENSE",
@@ -36,6 +40,7 @@
     "@commitlint/config-conventional": "16.0.0",
     "@discordjs/ts-docgen": "0.3.4",
     "@modii/tscpaths": "0.2.2",
+    "@musicca/structs": "1.0.1",
     "@types/jest": "27.4.0",
     "@typescript-eslint/eslint-plugin": "5.8.1",
     "@typescript-eslint/parser": "5.8.1",
@@ -58,5 +63,11 @@
     "*.{js,ts,jsx,tsx}": [
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "musicca": "1.0.3",
+    "ytdl-core": "4.9.2",
+    "ytpl": "2.2.3",
+    "ytsr": "3.5.3"
   }
 }
