@@ -10,8 +10,9 @@ module.exports = {
   testEnvironment: 'node',
   testPathIgnorePatterns: ['node_modules'],
   passWithNoTests: true,
-  detectOpenHandles: true,
+  detectOpenHandles: false,
   verbose: true,
+  forceExit: true,
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/src/'
   }),
