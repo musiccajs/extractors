@@ -66,7 +66,7 @@ export class YoutubeExtractor extends Extractor<YoutubeExtractorOptions> {
     return ytdl(url, this.options);
   }
 
-  static async search(input: string, options?: YtsrOptions): Promise<ExtendedYtsrResult> {
+  async search(input: string, options?: YtsrOptions): Promise<ExtendedYtsrResult> {
     const result = await ytsr(input, options).then((res) => YoutubeExtractor.appendNext<ExtendedYtsrResult>(res, res.continuation));
 
     return result;

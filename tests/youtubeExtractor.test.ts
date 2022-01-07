@@ -110,7 +110,8 @@ describe('extracting playlist', () => {
 });
 
 describe('search', () => {
-  test('should find videos', () => YoutubeExtractor.search('Never Gonna Give You Up', { limit: 5 }).then((res) => {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  test('should find videos', () => client.extractors.get<YoutubeExtractor>('yt-ext')!.search('Never Gonna Give You Up', { limit: 5 }).then((res) => {
     const media = res.items[0] as Video;
 
     expect(media.type).toBe('video');
