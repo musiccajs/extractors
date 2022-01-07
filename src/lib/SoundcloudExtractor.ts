@@ -1,7 +1,7 @@
 import { Extractor, ExtractorOptions, Media, MediaData } from 'musicca';
 import Soundcloud, { SoundcloudPlaylistV2, SoundcloudTrackV2 } from 'soundcloud.ts';
 import { Readable } from 'stream';
-import { Utils } from '.';
+import { Utils } from '..';
 
 export interface SoundcloudExtractorOptions extends ExtractorOptions {
   clientId?: string;
