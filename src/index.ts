@@ -2,3 +2,5 @@
 
 export * from './YoutubeExtractor';
 export * from './SoundcloudExtractor';
+
+export { default as Utils } from './Utils';

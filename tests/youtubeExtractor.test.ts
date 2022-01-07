@@ -24,7 +24,7 @@ describe('initiating client', () => {
     expect(client.queues.Struct).toBe(MemoryQueue);
   });
 
-  test('should have youtube extractor installed', () => {
+  test('should have extractor installed', () => {
     expect(client.extractors.get('yt-ext')).toBeInstanceOf(YoutubeExtractor);
   });
 });
