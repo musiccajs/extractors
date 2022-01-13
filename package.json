@@ -36,22 +36,22 @@
     "package.json"
   ],
   "devDependencies": {
-    "@commitlint/cli": "16.0.1",
+    "@commitlint/cli": "16.0.2",
     "@commitlint/config-conventional": "16.0.0",
     "@discordjs/ts-docgen": "0.3.4",
     "@modii/tscpaths": "0.2.2",
-    "@musicca/structs": "1.0.2",
+    "@musicca/structs": "1.0.3",
     "@types/jest": "27.4.0",
-    "@typescript-eslint/eslint-plugin": "5.8.1",
-    "@typescript-eslint/parser": "5.8.1",
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1",
     "eslint": "8.6.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-import": "2.25.4",
     "eslint-plugin-prettier": "4.0.0",
     "husky": "7.0.4",
-    "jest": "27.4.5",
-    "lint-staged": "12.1.4",
+    "jest": "27.4.7",
+    "lint-staged": "12.1.7",
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
     "ts-jest": "27.1.2",
@@ -65,10 +65,10 @@
     ]
   },
   "dependencies": {
-    "musicca": "1.0.4",
+    "musicca": "1.0.5",
     "soundcloud.ts": "0.4.5",
-    "ytdl-core": "4.9.2",
+    "ytdl-core": "4.10.0",
     "ytpl": "2.2.3",
-    "ytsr": "3.5.3"
+    "ytsr": "3.6.0"
   }
 }
