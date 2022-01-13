@@ -3368,6 +3368,11 @@ musicca@1.0.4:
   resolved "https://registry.yarnpkg.com/musicca/-/musicca-1.0.4.tgz#b9c4d8b147e6dc0dad354237edd18d969c02e8ce"
   integrity sha512-xNbToOSqUsXyxzJdyJP0yNbNFsuYxqFVazHfDGWaczjysrVmblCgLjd3CvyOq4jqZ78FtPMBf/Wtn9meJ5Qkgg==
 
+musicca@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/musicca/-/musicca-1.0.5.tgz#57c1445fdaeafd1b077b30e8135fd739cf57773c"
+  integrity sha512-MffTS9LDjlgHoL8wz8ni1iVg1HD69vrZj5SLNltpjOBOpIfDntlweNr2riSxs9NZLv8RzCPTU1sPJ9Rvj0c4JA==
+
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
