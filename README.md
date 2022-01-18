@@ -22,7 +22,7 @@ pnpm add @musicca/extractors
 
 # Links 🔗
 
-- [Website](https://musicca.edqe.me) ([source](https://github.com/musiccajs/website))
-- [Documentation](https://musicca.edqe.me/docs)
+- [Website](https://musicca.js.org) ([source](https://github.com/musiccajs/website))
+- [Documentation](https://musicca.js.org/#/docs/extractors)
 - [Github](https://github.com/musiccajs/extractors)
 - [npm](https://www.npmjs.com/package/@musicca/extractors)

@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/musiccajs/extractors/issues"
   },
-  "homepage": "https://github.com/musiccajs/extractors#readme",
+  "homepage": "https://musicca.js.org/",
   "files": [
     "dist",
     "LICENSE",
