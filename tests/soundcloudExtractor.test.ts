@@ -1,5 +1,4 @@
-import Musicca, { Media, PluginType } from 'musicca';
-import { MemoryQueue } from '@musicca/structs';
+import Musicca, { Media, PluginType, MemoryQueue } from 'musicca';
 import { Readable } from 'stream';
 import { PlaylistMedia, SoundcloudExtractor } from '../src';
 

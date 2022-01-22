@@ -40,7 +40,6 @@
     "@commitlint/config-conventional": "16.0.0",
     "@discordjs/ts-docgen": "0.3.4",
     "@modii/tscpaths": "0.2.2",
-    "@musicca/structs": "1.0.3",
     "@types/jest": "27.4.0",
     "@typescript-eslint/eslint-plugin": "5.9.1",
     "@typescript-eslint/parser": "5.9.1",

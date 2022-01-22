@@ -681,13 +681,6 @@
     fs-extra "^10.0.0"
     tsconfig "^7.0.0"
 
-"@musicca/structs@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@musicca/structs/-/structs-1.0.3.tgz#2184a6aa9e90ab4e102cd0d3d0ced75290d0df4f"
-  integrity sha512-fl51Luv/9RfvQkKy7AZqb8yWWbzY+v6s/F2qiqmUR9vlI4NKRxZn8kWogpz7kBBiZA9wef2iN97e4EpQCWF4sA==
-  dependencies:
-    musicca "1.0.5"
-
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -3342,11 +3335,6 @@ ms@^2.1.1:
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
-
-musicca@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/musicca/-/musicca-1.0.5.tgz#57c1445fdaeafd1b077b30e8135fd739cf57773c"
-  integrity sha512-MffTS9LDjlgHoL8wz8ni1iVg1HD69vrZj5SLNltpjOBOpIfDntlweNr2riSxs9NZLv8RzCPTU1sPJ9Rvj0c4JA==
 
 musicca@1.1.0:
   version "1.1.0"
