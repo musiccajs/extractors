@@ -66,7 +66,7 @@
   "dependencies": {
     "musicca": "1.1.0",
     "soundcloud.ts": "0.4.5",
-    "ytdl-core": "4.10.0",
+    "ytdl-core": "4.11.5",
     "ytpl": "2.2.3",
     "ytsr": "3.6.0"
   }
